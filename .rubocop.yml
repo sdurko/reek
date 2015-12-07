@@ -1,0 +1,61 @@
+AllCops:
+  Exclude:
+    - 'spec/samples/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+
+# FIXME: Make the class shorter
+Metrics/ClassLength:
+  Exclude:
+    - lib/reek/tree_walker.rb
+    - lib/reek/cli/options.rb
+
+# FIXME: Lower the method length by fixing the biggest offenders
+Metrics/MethodLength:
+  Max: 15
+
+# Be rather lenient with line length
+Metrics/LineLength:
+  Max: 120
+
+# Keyword arguments make long parameter lists readable
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
+# Indent one level for follow-up lines
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+# Allow small arrays of words with quotes
+Style/WordArray:
+  MinSize: 3
+
+# Allow single-line method definitions
+Style/SingleLineMethods:
+  Enabled: false
+
+# Always use raise to signal exceptions
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+# Place . on the previous line
+Style/DotPosition:
+  EnforcedStyle: trailing
+
+# Require empty lines between defs, except for one-line defs
+Style/EmptyLineBetweenDefs:
+  AllowAdjacentOneLineDefs: true
+
+# Allow multiline block chains
+Style/MultilineBlockChain:
+  Enabled: false
+
+# Allow Perl-style references to regex matches
+Style/PerlBackrefs:
+  Enabled: false
+
+Style/Documentation:
+  Exclude:
+    - 'lib/reek/ast/sexp_extensions/send.rb'
+    - 'lib/reek/ast/sexp_extensions/super.rb'
+    - 'lib/reek/ast/sexp_extensions/variables.rb'

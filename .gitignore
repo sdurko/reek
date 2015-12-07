@@ -1,0 +1,15 @@
+pkg
+spec/output
+tmp
+doc
+.yardoc
+.bundle
+.rspec
+.rbx
+Gemfile.lock
+*.swp
+tags
+.pryrc
+.tags*
+.DS_Store
+.idea/
